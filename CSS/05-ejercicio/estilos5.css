@@ -1,0 +1,166 @@
+                /* EJERCICIO CSS
+1. crear documento html y vincular con css
+2. estructira html: 1 contenedor general, 2 cabecera,3 menu y sidebar , 4 main contenido , 5 footer
+3. Todo dentro del contenedor general- ancho 1200px,
+4. header ancho 100% y texto centrado
+5. menu elementos una al lado del otro
+6. el main un ancho 70%
+7. contenido dentro del div de contenido- 4 lineas de 2 cajas (cuadricula)
+8. el sidebar ancho 30%
+9. el footer ancho 100% de su div
+*/
+                
+                * {
+                    margin: 0px;
+                    padding: 0px;
+                    text-decoration: none;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+                
+                #contenedor {
+                    width: 1200px;
+                    border: 2px solid black;
+                    margin: 0px auto;
+                    margin-top: 20px;
+                }
+                
+                #header {
+                    width: 100%;
+                    height: 100px;
+                    background-color: mediumblue;
+                    color: white;
+                    text-align: center;
+                    line-height: 90px;
+                }
+                
+                .clearfix {
+                    float: none;
+                    clear: both;
+                }
+                
+                #nav ul li {
+                    /*display: inline-block;*/
+                    display: block;
+                    float: left;
+                    background-color: #eeeeee;
+                    border-right: 1px solid #cccccc;
+                }
+                
+                #nav ul li a {
+                    color: #444;
+                    display: block;
+                    padding: 15px;
+                }
+                
+                #nav ul li a:hover {
+                    background-color: blue;
+                    cursor: pointer;
+                }
+                
+                #nav ul li:hover a {
+                    color: white;
+                }
+                
+                #contenido {
+                    width: 69%;
+                    border: 1px solid green;
+                    float: left;
+                }
+                
+                #lateral {
+                    width: 30%;
+                    border: 1px solid red;
+                    float: left;
+                    text-align: center;
+                    min-height: 500px;
+                    max-height: 800px;
+                    border-bottom: 10px solid red;
+                    border-top: 10px solid red;
+                    overflow-y: scroll;
+                    /* overflow: hidden; ocultar */
+                }
+                
+                #contenido .caja {
+                    position: relative;
+                    /*posicion que viene por defecto, no es necesaro ponerla*/
+                    width: 40%;
+                    height: 250px;
+                    background-color: grey;
+                    color: black;
+                    border: 5px solid blue;
+                    float: left;
+                    margin: 20px;
+                    margin-left: 40px;
+                    text-align: center;
+                    line-height: 200px;
+                    text-transform: uppercase;
+                    opacity: 0.75;
+                    box-shadow: 5px 4px 15px black;
+                    border-radius: 20px;
+                    /* border-radius: 999px;  hacer un circulo si la caja es cuadrada altura=anchura*/
+                }
+                
+                .sombra-interior {
+                    box-shadow: 0px 0px 55px black inset !important;
+                    border-radius: 25px 5px 25px 5px !important;
+                }
+                
+                #contenido h1 {
+                    text-align: center;
+                    border-bottom: 10px solid #cccccc;
+                    padding: 15px;
+                    color: #444;
+                    text-shadow: 0px 0px 5px black;
+                }
+                
+                #footer {
+                    width: 100%;
+                    text-align: center;
+                    height: 55px;
+                    line-height: 55px;
+                    border-top: 5px solid blue;
+                    color: #444;
+                    background-color: aliceblue;
+                }
+                
+                .libre {
+                    border: 1px solid black;
+                    background-color: aqua;
+                    width: 50px;
+                    height: 50px;
+                    color: black;
+                    font-weight: bolder;
+                    font-size: 10px;
+                    position: absolute;
+                    top: 35px;
+                    left: 6%;
+                    z-index: 1;
+                }
+                
+                .libre2 {
+                    border: 1px solid black;
+                    background-color: seagreen;
+                    width: 50px;
+                    height: 50px;
+                    color: black;
+                    font-weight: bolder;
+                    font-size: 15px;
+                    position: absolute;
+                    top: 45px;
+                    left: 6%;
+                    z-index: 2;
+                }
+                
+                .fija {
+                    border: 1px solid black;
+                    background-color: rgb(5, 26, 26);
+                    width: 50px;
+                    height: 50px;
+                    color: white;
+                    font-weight: bolder;
+                    font-size: 15px;
+                    position: fixed;
+                    /*no acompaña al scroll*/
+                    bottom: 4px;
+                    left: 6%;
+                }

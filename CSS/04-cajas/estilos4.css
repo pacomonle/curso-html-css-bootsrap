@@ -1,0 +1,51 @@
+                                                            * {
+                                                                margin: 0px;
+                                                                padding: 0px;
+                                                            }
+                                                            
+                                                            body {
+                                                                padding: 40px;
+                                                            }
+                                                            
+                                                            .caja1 {
+                                                                width: 250px;
+                                                                height: 250px;
+                                                                background-color: aquamarine;
+                                                                border: 5px solid red;
+                                                                margin: 15px;
+                                                                padding: 20px;
+                                                                float: left;
+                                                                display: block;
+                                                                /*para flotar es necesariodisplay block */
+                                                            }
+                                                            
+                                                            .cajas {
+                                                                max-width: 900px;
+                                                                border: 10px solid black;
+                                                            }
+                                                            
+                                                            .caja2 {
+                                                                width: 250px;
+                                                                height: 250px;
+                                                                background-color: violet;
+                                                                border: 5px solid blue;
+                                                                margin: 15px;
+                                                                padding: 20px;
+                                                                line-height: 125px;
+                                                                float: left;
+                                                                display: block;
+                                                                /*a los div hay que ponerlos en display block*/
+                                                            }
+                                                            
+                                                            p {
+                                                                text-align: center;
+                                                                font-size: 16px;
+                                                                font-weight: bold;
+                                                                font-family: Arial, Helvetica, sans-serif;
+                                                                line-height: 125px;
+                                                            }
+                                                            
+                                                            .clearfix {
+                                                                float: none;
+                                                                clear: both;
+                                                            }

@@ -1,0 +1,109 @@
+  /*
+            * SELECTORES
+            */
+  /*selector universal*/
+  
+  * {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  /*selector de etiqueta*/
+  
+  body {
+      background: rgb(239, 244, 245);
+  }
+  
+  h1,
+  h2 {
+      font-size: 40px;
+      /* text-shadow: 0px 0px 12px rgb(36, 8, 8);*/
+      text-decoration: underline;
+      padding: 10px;
+      color: white;
+      -webkit-text-stroke: 2px black;
+  }
+  
+  a {
+      font-size: 15px;
+      font-weight: bolder;
+      color: orangered;
+      text-decoration: none;
+      font-family: monospace;
+  }
+  
+  footer a {
+      font-size: 20px;
+      font-weight: bolder;
+      color: orangered;
+  }
+  /*selector de id*/
+  
+  #contenido {
+      border: 2px solid black;
+      border-radius: 2px;
+      padding: 12px;
+  }
+  
+  #titulo {
+      border: 2px dashed red;
+      border-radius: 2px;
+      padding: 12px;
+      background: blue;
+  }
+  /*selector de class*/
+  
+  .parrafo {
+      font-weight: bold;
+      text-decoration: underline;
+      font-style: italic;
+      padding: 10px;
+  }
+  
+  .parrafo1 {
+      background-color: forestgreen;
+      color: whitesmoke;
+  }
+  /*selector de atributo*/
+  
+  #formulario form {
+      border: 2px solid blue;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      padding: 20px;
+  }
+  
+  #formulario form * {
+      display: block;
+  }
+  
+  input[tye="text"] {
+      padding: 10px;
+      width: 300px;
+  }
+  
+  input[type="submit"] {
+      padding: 10px;
+      border-radius: 300px;
+      background-color: crimson;
+      color: white;
+      font-weight: 100;
+      text-transform: uppercase;
+      cursor: pointer;
+  }
+  /* selectores hijo */
+  
+  #menu>li>a {
+      font-size: 15px;
+      font-weight: bolder;
+      color: red;
+      text-decoration: none;
+  }
+  /* prioridad-  cuanto mas especifico es la prioridad*/
+  /* maxima prioridad !mportant*/
+  
+  h2 {
+      background-color: violet !important;
+  }
+  
+  #despedida h2 {
+      background-color: brown;
+  }

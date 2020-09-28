@@ -1,0 +1,54 @@
+// variables
+@bgcolor: lightblue;
+@fuente: Arial;
+@b: body;
+@{b}{
+    background-color: @bgcolor;
+}
+h1{
+    font-family: @fuente;
+}
+//anidacion
+.informacion{
+    ul{
+        li{
+            a{
+                color:green;
+                font-size: 25px;
+            }
+        }
+
+}}
+
+// mixins
+.sombras(@size){
+    box-shadow: 0px 0px @size black;
+    text-shadow: 0px 0px @size orangered ;
+}
+.informacion{
+    .sombras(25px);
+}
+// operadores
+
+
+h1{
+    font-size: 30px+40px;
+}
+ // mixins ondicionales
+ .textoNegro (@value) when (@value=true){
+     color: black;
+ }
+ h1{
+color: blue; 
+//.textoNegro(false);
+.textoNegro(true);   // el @value= black; y .textoNegro(black);
+ }
+ // mixins iterativos
+ .loop(@cont) when (@cont>0){
+     .loop((@cont - 1));
+     height: (900px  / @cont);
+ }
+ .informacion{
+     height: 900px;
+     .loop(5);
+    }

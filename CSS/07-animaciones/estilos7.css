@@ -1,0 +1,62 @@
+                                #boton {
+                                    display: block;
+                                    background-color: green;
+                                    padding: 20px;
+                                    width: 200px;
+                                    font-weight: bold;
+                                    font-family: Arial, Helvetica, sans-serif;
+                                    text-decoration: none;
+                                    text-align: center;
+                                    color: antiquewhite;
+                                    border-radius: 15px;
+                                    box-shadow: 0px 0px 40px black;
+                                    border: 4px solid rgb(1, 42, 1);
+                                    transition: all 1s;
+                                    /* se puede de hacer de una sola propiedad - transition: border 1s, background 2s;*/
+                                }
+                                
+                                #boton:hover {
+                                    background-color: orangered;
+                                    font-weight: bold;
+                                    font-size: 26px;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    color: rgb(29, 28, 28);
+                                    box-shadow: 0px 0px 40px black inset;
+                                    border: 4px solid rgb(207, 57, 3);
+                                }
+                                
+                                #caja {
+                                    margin-top: 25px;
+                                    width: 250px;
+                                    height: 250px;
+                                    background-color: lightseagreen;
+                                    color: white;
+                                    border: 3px solid black;
+                                    font-size: 20px;
+                                    text-align: center;
+                                    line-height: 180px;
+                                    animation-name: desplazamiento;
+                                    animation-duration: 15s;
+                                    animation-iteration-count: infinite;
+                                    animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+                                }
+                                
+                                @keyframes desplazamiento {
+                                    0% {
+                                        margin-left: 0px;
+                                        transform: rotate(0deg);
+                                    }
+                                    50% {
+                                        margin-left: 1200px;
+                                        transform: rotate(360deg);
+                                        border-radius: 999px;
+                                    }
+                                    75% {
+                                        background-color: red;
+                                        border: 4px dashed blue;
+                                    }
+                                    100% {
+                                        margin-left: 0px;
+                                        transform: rotate(0deg);
+                                    }
+                                }

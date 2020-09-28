@@ -1,0 +1,421 @@
+        /*
+* importar fuentes
+*/
+        
+        @font-face {
+            font-family: "FajallaOne";
+            src: url("./fonts/FjallaOne-Regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: "WebSymbolsRegular";
+            src: url("./fonts/websymbols-regular-webfont.svg") format("svg");
+            src: url("./fonts/websymbols-regular-webfont.eot");
+            src: url("./fonts/websymbols-regular-webfont.ttf") format("truetype");
+            src: url("./fonts/websymbols-regular-webfont.wof") format("wof");
+            font-weight: bold;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: "nevis";
+            src: url("./fonts/nevis.eot");
+            src: url("./fonts/nevis.eot?#iefix") format("embebed-opentype");
+            src: url("./fonts/nevis.ttf") format("truetype");
+            src: url("./fonts/nevis.svg") format("svg");
+            src: url("./fonts/nevis.wof") format("wof");
+            font-weight: normal;
+            font-style: normal;
+        }
+        /*general*/
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-image: url('../img/recursos-maquetacion-1-master-css-victor-robles/img/paven.png');
+        }
+        /*formularios*/
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            border: 1px solid #cc99cc;
+            box-shadow: 0px 0px 4px #ccc inset;
+            background-color: white;
+            padding: 1px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            color: gray;
+            transition: all 300ms;
+        }
+        
+        input[type="text"] :focus,
+        input[type="email"]:focus,
+        input[type="password"] :focus,
+        select:focus {
+            border: 1px solid #70b231;
+            color: black;
+        }
+        
+        input[type="submit"],
+        input[type="reset"],
+        input[type="button"],
+        button {
+            display: block;
+            border-radius: px;
+            border: 2px solid green;
+            width: 60px;
+            padding: 3px;
+            background-color: #70b231;
+            cursor: pointer;
+            color: white;
+        }
+        
+        input[type="submit"]:hover,
+        input[type="reset"]:hover,
+        input[type="button"]:hover,
+        button:hover {
+            box-shadow: 0px 0px 10px gray;
+        }
+        
+        input[type="submit"]:active,
+        input[type="reset"]:active,
+        input[type="button"]:active,
+        button:active {
+            box-shadow: 0px 0px 10px rgb(36, 2, 129) inset;
+            text-shadow: 5px 5px 20px grey;
+        }
+        
+        a {
+            color: #529125;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #285628;
+        }
+        /*
+a:visited {
+    color: red;
+}
+/*
+
+/*header*/
+        
+        #header {
+            min-width: 1024px;
+            width: 100%;
+            height: 250px;
+            margin: 0px auto;
+        }
+        
+        #header a {
+            text-decoration: none;
+            color: #70b231
+        }
+        
+        #header #logo {
+            width: 770px;
+            margin: 0px auto;
+            padding-top: 20px;
+        }
+        
+        #header #logo img {
+            width: 140px;
+            margin: 0px auto;
+            display: block;
+            text-align: center;
+        }
+        
+        #header h1 {
+            text-align: center;
+            font-size: 40px;
+            color: #70b231;
+            font-family: "nevis";
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: 10px;
+            text-shadow: 0px 2px 1px #333333;
+            transition: all 300ms;
+        }
+        
+        #header h1:hover {
+            text-shadow: 0px 2px 1px #333333, 0px 1px 4px green;
+        }
+        /*barra navegacion*/
+        
+        #nav {
+            width: 100%;
+            color: white;
+            background-color: #333333;
+            height: 40px;
+            font-family: sans-serif;
+            font-size: 14px;
+            box-shadow: 0px 0px 2px grey;
+        }
+        
+        ul {
+            list-style: none;
+            text-decoration: none;
+            margin: 0px auto;
+            width: 1130px;
+        }
+        
+        #nav>ul>li {
+            line-height: 40px;
+            float: left;
+            /*  border-right: 1px solid grey;*/
+            width: 100px;
+            padding-left: 5px;
+            border-right: 1px solid white!important;
+        }
+        
+        #nav>ul>li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding-left: 8px;
+            padding-right: 2px;
+        }
+        
+        #nav>ul>li>a:first-child {
+            border-left: 1px solid white;
+        }
+        
+        #nav>ul>li:hover {
+            background-color: green;
+            box-shadow: 0px 0px 4px green inset;
+            transition: all 300ms;
+        }
+        /*submenus despegables*/
+        
+        #nav>ul>li>ul {
+            display: none;
+            color: white;
+            position: absolute;
+            width: 100px;
+            margin-left: -5px;
+            box-shadow: 0px 2px 2px solid grey;
+            z-index: 1;
+            padding: 3px;
+        }
+        
+        #nav>ul>li:hover>ul {
+            display: block;
+        }
+        
+        #nav>ul>li:hover>ul>li {
+            font-size: 13px;
+            line-height: 22px;
+            transition: all 300ms;
+            text-align: left;
+        }
+        
+        #nav>ul>li:hover>ul>li a {
+            background-color: green;
+        }
+        
+        #nav>ul>li:hover>ul>li:hover {
+            box-shadow: 10px 0px 0px blue;
+        }
+        /*contenido*/
+        
+        #content {
+            margin: 0px auto;
+            width: 1250px;
+            min-height: 1200 px;
+        }
+        /*sidebar*/
+        
+        #sidebar,
+        #frase {
+            width: 200px;
+            float: left;
+            margin: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0px 2px 4px #ccc;
+            font-family: sans-serif;
+            clear: both;
+        }
+        
+        #sidebar .widget {
+            display: block;
+            margin: 5px auto;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding: 8px;
+            width: 180px;
+            font-size: 14px;
+            border-bottom: 2px dashed #ccc;
+        }
+        
+        #sidebar .widget:last-child {
+            margin-bottom: 20px;
+        }
+        
+        #sidebar h3 {
+            display: block;
+            color: #333;
+            width: 100%;
+            text-align: center;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            background-color: #4285F4;
+            border: #333;
+            border-left: none;
+            border-right: none;
+            margin-bottom: 15px;
+        }
+        
+        #sidebar label,
+        #sidebar input[type="text"],
+        #sidebar input[type="email"],
+        #sidebar input[type="password"],
+        #sidebar label a {
+            display: block;
+            width: 95%;
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+        
+        #sidebar input[type="submit"],
+        #sidebar input[type="reset"],
+        #sidebar input[type="button"],
+        #sidebar button {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        
+        #seidebar input,
+        #sidebar label {
+            margin: 0px auto;
+            text-align: center;
+        }
+        
+        #sidebar .widget li {
+            margin-top: 8px;
+            margin-left: 10px;
+            margin-bottom: 4px;
+            list-style: square;
+        }
+        
+        #frase {
+            padding: 1px;
+            font-family: sans-serif;
+            font-size: 13px;
+            text-align: justify;
+            margin-left: -5px;
+        }
+        
+        #frase h4 {
+            text-align: center;
+            text-decoration: underline;
+            font-style: italic;
+            box-shadow: 0px 0px 12px black;
+        }
+        
+        .blnaco {
+            color: whitesmoke !important;
+            font-weight: bold !important;
+        }
+        
+        .blue {
+            color: darkblue !important;
+            font-weight: bold !important;
+        }
+        
+        .icon {
+            font-family: "WebSymbolsRegular" !important;
+            float: left;
+            margin-right: 5px;
+            margin-top: -1px;
+        }
+        
+        .clearfix {
+            float: none;
+            clear: both;
+        }
+        /*secciones*/
+        
+        #secciones {
+            float: right;
+            font-family: sans-serif;
+            width: 75%;
+            margin-right: 20px;
+        }
+        
+        #secciones .titulo {
+            margin-top: 20px;
+            margin-bottom: 5px;
+            font-size: 25px;
+            font-family: "FajallaOne";
+            text-align: center;
+            letter-spacing: 1 px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        #secciones section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 4px #c9c9c9;
+            font-size: 16px;
+            color: #333333;
+            overflow: hidden;
+        }
+        
+        #secciones .article {
+            margin: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        #secciones .date {
+            color: gray;
+            font-size: 14px;
+        }
+        
+        #secciones .stickerOne {
+            position: absolute;
+            margin-top: -38px;
+            z-index: 0;
+        }
+        
+        #secciones .stickerTwo {
+            position: absolute;
+            margin-top: -38px;
+            z-index: 0;
+            margin-left: 860px;
+        }
+        
+        #history {
+            font-family: sans-serif;
+            float: right;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+        /*pie de pagina*/
+        
+        #footer {
+            width: 100%;
+            text-align: center;
+            margin: 0px auto;
+            margin-top: 40px;
+            color: white;
+            background-color: #333333;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-family: sans-serif;
+            font-size: 14px;
+            box-shadow: 0px 0px 5px gray;
+        }
